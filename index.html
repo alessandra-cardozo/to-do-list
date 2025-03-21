@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronos-todolist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="img/header.svg" id="img-logo" alt="Logo Cronos">
+            <p id="p-header"><em>estabeleça metas • organize seu tempo • evolua sempre</em></p>
+        </div>
+    </header>
+
+    <div class="overlay" id="modal-overlay">
+        <form class="formulario" id="modal">
+            <div class="span">
+                <span class="close">&times;</span>
+            </div>
+            <h2 class="novo-item">Adicionar nova Tarefa</h2>
+
+            <div class="container">
+                <input id="input-novo-item" type="text" placeholder="Digite o nome da nova tarefa"></input>
+                <input id="btn-add-form" type="submit" value="Adicionar">
+            </div>
+
+            <div id="dia-semana">
+                <p class="descricao">Confirme o dia da semana que deseja adicionar a tarefa:</p>
+                <select name="dia-semana">
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div id="editContainer">
+        <input id="editInput" type="text">
+        <button id="editButton" onclick="editar(event)">Editar</button>
+        <button id="cancelButton" onclick="cancelar(event)">Cancelar</button>
+    </div>
+
+    <div id="semana">
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="segunda">Segunda-feira</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="terca">Terça-feira</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="quarta">Quarta-feira</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="quinta">Quinta-feira</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="sexta">Sexta-feira</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="sabado">Sábado</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+
+        <div class="dia-semana">
+            <div class="container-dia-semana">
+                <h3 class="dia" id="domingo">Domingo</h3>
+                <input class="btn-add" type="submit" value="+">
+            </div>
+            <ul class="lista-itens"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <a href="https://www.linkedin.com/in/alessandra-cardozo-dos-santos-pcd-634529158//cronos">
+                <img src="img/logo1.svg" id="img-logofooter" alt="Logo Cronos">
+            </a>
+            <a href="https://www.linkedin.com/in/alessandra-cardozo-dos-santos-pcd-634529158/">
+                <p class="copyright">&copy; Desenvolvido por Alessandra Cardozo - 2025</p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

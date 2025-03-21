@@ -1,0 +1,338 @@
+:root {
+    --background: #E9FFD9;
+    --background-2: #EFFFE3;
+    --background-transparent: #7e7e7ec4;
+    --gray: #A7A7A7;
+    --gray-ligth-1: #CFCFCF;
+    --gray-ligth-2: #AFAFAF;
+    --green-light-1: #C3EAA8;
+    --green-light-2: #B4E78E;
+    --green-dark-1: #7A9D60;
+    --green-dark-2: #51693e;
+    --green-dark-3: #82A368;
+    --white: #FEFEFE;
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    padding-top: 100px;
+    margin: 0;
+    background-color: var(--background);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to right, var(--green-light-2) 50%, var(--green-light-1) 100%);
+    width: 100%;
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#img-logo {
+    width: 300px;
+    margin: 0.5rem 3rem 0 3rem;
+}
+
+#p-header{
+    margin: auto 3rem;
+    text-align: right;
+}
+
+#modal-overlay {
+    display: none; /* display: block */
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-transparent);
+}
+
+.formulario {
+    background-color: var(--green-dark-1);
+    border-radius: 30px;
+    margin: 15% auto;
+    width: 400px;
+    height: 270px;
+}
+
+.span {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close {
+    color: var(--green-light-1);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    font-size: large;
+}
+  
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.novo-item {
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    margin: 1.5rem;
+    border-radius: 30px;
+}
+
+#input-novo-item {
+    background-color: var(--background-2);
+    padding: 0.5rem 1rem;
+    border: 5px var(--green-light-1) solid;
+    border-radius: 30px 0 0 30px;
+    width: 60%;
+}
+
+#btn-add-form {
+    background-color: var(--green-light-2);
+    border-color: var(--green-dark-3);
+    border-radius: 0 30px 30px 0;
+    text-align: center;
+    padding: 1rem;
+    font-size: medium;
+}
+
+#btn-add-form:hover {
+    background-color: var(--green-dark-2);
+    border-color: var(--green-light-2);
+    cursor: pointer;
+}
+
+#dia-semana {
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.descricao {
+    margin: 0;
+    font-size: small;
+    text-align: center;
+}
+
+select {
+    display: block;
+    background-color: var(--green-light-2);
+    border-color: var(--green-dark-3);
+    border-bottom: 3px var(--green-dark-2) solid;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0.5rem auto;
+    padding: 5px;
+}
+
+select:hover {
+    background-color: var(--green-dark-2);
+    border-bottom: 3px var(--green-dark-3) solid;
+    cursor: pointer;
+}
+
+#editContainer {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    padding: 0.5rem 1.5rem;
+    background-color:var(--green-dark-3);
+    z-index: 3;
+    border-radius: 30px;
+    justify-content:space-evenly;
+    align-items: center;
+    transition: all .5s;
+    display: none;
+}
+
+#editInput {
+    background-color: var(--green-light-2);
+    border-color: var(--green-dark-3);
+    border-radius: 30px 0 0 30px;
+    padding: 0.5rem;
+}
+
+#editButton {
+    background-color: var(--green-light-2);
+    border-color: var(--green-dark-3);
+    padding: 0.5rem;
+}
+
+#cancelButton {
+    background-color: var(--green-light-2);
+    border-radius: 0 30px 30px 0;
+    border-color: var(--green-dark-3);
+    padding: 0.5rem;
+}
+
+#editButton:hover, #cancelButton:hover {
+    background-color: var(--green-dark-2);
+    border-color: var(--green-light-2);
+    cursor: pointer;
+}
+
+#semana {
+    padding: 1rem;
+    display: flex;
+    overflow-inline: auto;
+}
+
+.dia-semana {
+    background-color: var(--green-light-1);
+    margin: 0.5rem;
+    min-width: 400px;
+    max-height: fit-content;
+    border-radius: 30px;
+}
+
+.container-dia-semana {
+    background-color: var(--green-light-1);
+    border-bottom: 5px var(--green-dark-1) solid;
+    border-radius: 30px 30px 0 0;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add {
+    background-color: var(--green-light-2);
+    border-color: var(--green-light-2);
+    border-radius: 30px;
+    height: fit-content;
+    text-align: center;
+    font-size: 30px;
+    padding: 1px 10px;
+}
+
+.btn-add:hover {
+    background-color: var(--green-dark-1);
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.lista-itens {
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    min-height: 300px;
+    border-radius: 0 0 30px 30px;
+}
+
+.li-tarefas {
+    background-color: var(--background-2);
+    border-bottom: 5px var(--green-dark-1) solid;
+    border-radius: 15px;
+    column-gap: 0.8rem;
+    display: flex;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+
+.nome-tarefa {
+    width: 80%;
+    align-items: center;
+    word-break: break-word;
+}
+
+.fa-edit, .fa-trash-alt {
+    color: var(--green-dark-1);
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.fa-edit:hover, .fa-trash-alt:hover {
+    color: var(--green-dark-2);
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    height: 20%;
+    width: 100%;
+}
+
+#footer {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--green-dark-2);
+    display: inline-block;   
+    vertical-align: middle;
+}
+
+#img-logofooter {
+    max-height: 50px;
+    animation: rotation 30s infinite linear;
+    margin: 0 3rem 0 0;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+
+/*Responsividade*/
+@media (max-width: 666px) {
+    body {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    #img-logo {
+        margin: auto;
+    }
+
+    #p-header {
+        display: none;
+    }
+
+    .formulario {
+        margin: 50% auto;
+        width: 90%;
+        height: 270px;
+    }
+
+    #semana {
+        display: block;
+        padding: 1rem auto;
+    }
+
+    .dia-semana {
+        min-width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .lista-itens {
+        min-height: fit-content;
+    }
+}
