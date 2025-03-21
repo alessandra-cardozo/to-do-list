@@ -10,6 +10,6 @@ E foi assim que surgiu o **Cronos**, um site elaborado para ser utilizado com ê
 
 ## 💻✨ Rodando o projeto
 Para rodar o repositório é necessário clonar o mesmo, e procurar no seu explorador de arquivos o HTML para iniciar o projeto: `index.html`
-Ou simplesmente clicar no link onde o mesmo está disponível para acesso: 
+Ou simplesmente clicar no link onde o mesmo está disponível para acesso: https://to-do-list-chi-seven-61.vercel.app/
 Observação: os testes referente ao layout e responsividade foram realizadas somente utilizando o Google Chrome e Android.<br><br>
 
